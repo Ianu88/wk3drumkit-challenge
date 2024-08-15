@@ -8,8 +8,8 @@ let snare = document.getElementById("snare");
 let tink = document.getElementById("tink");
 let tom = document.getElementById("tom");
 
+// adding play sounds on click
 let allKeys = document.querySelectorAll(".keyswrapper");
-// connecting all relevant sounds for later use
 let allSounds = [boom, clap, hiHat, kick, openhat, ride, snare, tink, tom];
 
 function removeTransition(e) {
@@ -18,6 +18,7 @@ function removeTransition(e) {
 }
 const keys = document.querySelectorAll('.keys');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
 //configure sounds and attach to keyboard//
 document.addEventListener('keypress', (keyValue) => {
     if (keyValue.key === "a") {
@@ -94,7 +95,8 @@ document.addEventListener('keypress', (keyValue) => {
         tom.play();
     }
   })
-//configure click on screen key sounds//
+
+  //configure click on screen key sounds//
 let count = 0
 allKeys.forEach((key, index) => {
     key.addEventListener("click", () => {
