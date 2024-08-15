@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+/* modified body for aesthetics */
 body {
     background-color:peru ;
     background-size: 500% 1000%;
@@ -8,6 +8,7 @@ body {
     color:black ;
     margin:0px;
 }
+/* added and configured keys for clicking */
 .keys {
     display: flex;
     justify-content: center;
@@ -27,7 +28,7 @@ body {
         top: -25%;
         animation:spin 1s infinite linear
 }
- 
+ /* a little polish for the aesthetics */
 .key {
     border-radius: 5px;
     font-size: 1.5rem;

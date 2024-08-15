@@ -9,16 +9,16 @@ let tink = document.getElementById("tink");
 let tom = document.getElementById("tom");
 
 let allKeys = document.querySelectorAll(".keyswrapper");
+// connecting all relevant sounds for later use
 let allSounds = [boom, clap, hiHat, kick, openhat, ride, snare, tink, tom];
 
 function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
     console.log(e.propertyName);
 }
-
 const keys = document.querySelectorAll('.keys');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
+//configure sounds and attach to keyboard//
 document.addEventListener('keypress', (keyValue) => {
     if (keyValue.key === "a") {
         boomwrapper.style.animation = "zoom 0.1s linear"
@@ -94,7 +94,7 @@ document.addEventListener('keypress', (keyValue) => {
         tom.play();
     }
   })
-
+//configure click on screen key sounds//
 let count = 0
 allKeys.forEach((key, index) => {
     key.addEventListener("click", () => {
